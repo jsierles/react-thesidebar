@@ -4,16 +4,15 @@
 
 - (void)insertReactSubview:(UIView *)view atIndex:(NSInteger)atIndex
 {
-    RCTLog(@"Child of type: %@", NSStringFromClass([view class]));
     if ([view isKindOfClass:[SidebarLeftView class]]) {
         _leftComponent = (SidebarLeftView *)view;
         [self _update];
     } else if ([view isKindOfClass:[SidebarContentView class]]) {
         _mainComponent = (SidebarContentView *)view;
         [self _update];
-    }/* else {
+    } else {
         RCTLogError(@"Unknown child of type: %@", NSStringFromClass([view class]));
-    }*/
+    }
 }
 
 - (void)_update
