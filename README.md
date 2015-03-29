@@ -1,2 +1,1 @@
-# react-thesidebar
-React native sidebar
+#not yet ready
