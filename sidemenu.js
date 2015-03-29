@@ -32,7 +32,7 @@ var SidebarMainView = createReactIOSNativeComponentClass({
 var SideMenu = React.createClass({
     render: function() {
         return (
-            <SidebarMainView style={styles.container}>
+            <SidebarMainView open={this.props.open} style={styles.container}>
                 <SidebarLeftView style={styles.container}>
                     {this.props.menu}
                 </SidebarLeftView>
