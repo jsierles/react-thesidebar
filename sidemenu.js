@@ -25,8 +25,11 @@ var SidebarContentView = createReactIOSNativeComponentClass({
 });
 
 var SidebarMainView = createReactIOSNativeComponentClass({
-    validAttributes: ReactIOSViewAttributes.UIView,
+    validAttributes: merge(ReactIOSViewAttributes.UIView, { 
+        open: true 
+    }),
     uiViewClassName: 'SidebarMainView',
+
 });
 
 var SideMenu = React.createClass({

@@ -11,7 +11,9 @@
 
 RCT_CUSTOM_VIEW_PROPERTY(open, BOOL, SidebarMainView)
 {
-    NSLog(@"HI");
+    if(open) {
+        [view openLeftbar];
+    }
 }
 
 @end

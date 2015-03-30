@@ -6,5 +6,9 @@
     TheSidebarController *_controller;
     SidebarLeftView      *_leftComponent;
     SidebarContentView   *_mainComponent;
+    
 }
+
+- (void)openLeftbar;
+
 @end

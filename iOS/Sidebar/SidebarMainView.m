@@ -27,4 +27,9 @@
     }
 }
 
+- (void)openLeftbar
+{
+    [_controller presentLeftSidebarViewController];
+}
+
 @end
