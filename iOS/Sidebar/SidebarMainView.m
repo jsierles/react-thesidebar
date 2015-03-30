@@ -32,4 +32,9 @@
     [_controller presentLeftSidebarViewController];
 }
 
+- (void)closeSidebar
+{
+    [_controller dismissSidebarViewController];
+}
+
 @end

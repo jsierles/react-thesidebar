@@ -9,6 +9,7 @@ var {
     AppRegistry,
     StyleSheet,
     TouchableHighlight,
+    TouchableWithoutFeedback,
     Text,
     View,
     Navigator
@@ -36,7 +37,7 @@ var ContentView = React.createClass({
 var SideBarView = React.createClass({
     render: function() {
         return (
-            <View style={styles.container}>
+            <View style={styles.sidebar}>
                 <Text style={styles.welcome}>
                     Sidebar
                 </Text>
@@ -52,15 +53,27 @@ var MainView = React.createClass({
             open: false
         };
     },
+
     onMenuOpen: function() {
-        this.setState({open: !this.state.open});
+        this.setState({open: true});
+    },
+
+    onMenuClose: function() {
+        console.log("closing");
+        this.setState({open: false});
     },
     render: function() {
-        var menu = <SideBarView/>;
-        var content = <ContentView menuOpen={this.onMenuOpen}/>;
-        return (
-            <SideMenu open={this.state.open} menu={menu} content={content}/>
+        var menu = (
+            <TouchableWithoutFeedback onPress={this.onMenuClose}>
+                <SideBarView/>
+            </TouchableWithoutFeedback>
         );
+        var content = (
+            <TouchableWithoutFeedback onPress={this.onMenuClose}>
+                <ContentView menuOpen={this.onMenuOpen}/>
+            </TouchableWithoutFeedback>
+        );
+        return <SideMenu open={this.state.open} menu={menu} content={content}/>;
     }
 });
 
@@ -71,6 +84,12 @@ var styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#ffffff',
+    },
+    sidebar: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#323232',
     },
     welcome: {
         fontSize: 20,

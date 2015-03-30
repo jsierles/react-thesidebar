@@ -10,5 +10,6 @@
 }
 
 - (void)openLeftbar;
+- (void)closeSidebar;
 
 @end

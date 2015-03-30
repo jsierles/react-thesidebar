@@ -1,6 +1,7 @@
 #import "SidebarMainViewManager.h"
 #import "SidebarMainView.h"
 #import "RCTView.h"
+#import "RCTConvert.h"
 
 @implementation SidebarMainViewManager
 
@@ -11,8 +12,11 @@
 
 RCT_CUSTOM_VIEW_PROPERTY(open, BOOL, SidebarMainView)
 {
-    if(open) {
+    NSLog(@"%i", [RCTConvert BOOL:json]);
+    if ([RCTConvert BOOL:json]) {
         [view openLeftbar];
+    } else {
+        [view closeSidebar];
     }
 }
 
