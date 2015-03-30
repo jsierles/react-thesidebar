@@ -12,12 +12,16 @@
 
 RCT_CUSTOM_VIEW_PROPERTY(open, BOOL, SidebarMainView)
 {
-    NSLog(@"%i", [RCTConvert BOOL:json]);
     if ([RCTConvert BOOL:json]) {
         [view openLeftbar];
     } else {
         [view closeSidebar];
     }
+}
+
+RCT_CUSTOM_VIEW_PROPERTY(transitionStyle, NSString, SidebarMainView)
+{
+    [view setTransitionStyle:[RCTConvert NSString:json]];
 }
 
 @end

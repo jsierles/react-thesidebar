@@ -29,12 +29,34 @@
 
 - (void)openLeftbar
 {
-    [_controller presentLeftSidebarViewControllerWithStyle:SidebarTransitionStyleAirbnb];
+    [_controller presentLeftSidebarViewControllerWithStyle:_transitionStyle];
 }
 
 - (void)closeSidebar
 {
     [_controller dismissSidebarViewController];
+}
+
+- (void)setTransitionStyle:(NSString *)style
+{
+    if([style isEqual:@"facebook"]) {
+        _transitionStyle = SidebarTransitionStyleFacebook;
+    }
+    else if([style isEqual:@"airbnb"]) {
+        _transitionStyle = SidebarTransitionStyleAirbnb;
+    }
+    else if([style isEqual:@"luvocracy"]) {
+        _transitionStyle = SidebarTransitionStyleLuvocracy;
+    }
+    else if([style isEqual:@"feedly"]) {
+        _transitionStyle = SidebarTransitionStyleFeedly;
+    }
+    else if([style isEqual:@"flipboard"]) {
+        _transitionStyle = SidebarTransitionStyleFlipboard;
+    }
+    else if([style isEqual:@"wunderlist"]) {
+        _transitionStyle = SidebarTransitionStyleWunderlist;
+    }
 }
 
 @end
