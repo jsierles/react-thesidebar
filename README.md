@@ -2,8 +2,8 @@
 Implementation of the magnificient [TheSidebarcontroller](https://github.com/jondanao/TheSidebarController) in react-native
 Not sure yet what's the best way of releasing react-native components with mixed js and Obj-C code so for now an example project will do.  
 
-![closed](http://imgur.com/TABIpki,NWFyrwz#1)
-![open](http://imgur.com/TABIpki,NWFyrwz#0)
+<img src="http://imgur.com/TABIpki,NWFyrwz#1"/>
+<img src="http://imgur.com/TABIpki,NWFyrwz#0"/>
 
 No support for right hand side sidebar at the moment.
 
