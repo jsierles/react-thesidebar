@@ -62,16 +62,21 @@ var MainView = React.createClass({
         console.log("closing");
         this.setState({open: false});
     },
+
     render: function() {
         var menu = (
             <TouchableWithoutFeedback onPress={this.onMenuClose}>
-                <SideBarView/>
+                <View style={styles.sidebar}>
+                    <SideBarView/>
+                </View>
             </TouchableWithoutFeedback>
         );
         var content = (
-            <TouchableWithoutFeedback onPress={this.onMenuClose}>
-                <ContentView menuOpen={this.onMenuOpen}/>
-            </TouchableWithoutFeedback>
+                <TouchableWithoutFeedback onPress={this.onMenuClose}>
+                    <View style={styles.container}>
+                        <ContentView menuOpen={this.onMenuOpen}/>
+                    </View>
+                </TouchableWithoutFeedback>
         );
         return <SideMenu open={this.state.open} menu={menu} content={content}/>;
     }
