@@ -29,7 +29,7 @@
 
 - (void)openLeftbar
 {
-    [_controller presentLeftSidebarViewController];
+    [_controller presentLeftSidebarViewControllerWithStyle:SidebarTransitionStyleAirbnb];
 }
 
 - (void)closeSidebar
