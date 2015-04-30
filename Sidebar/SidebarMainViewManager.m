@@ -10,6 +10,8 @@
     return [[SidebarMainView alloc] init];
 }
 
+RCT_EXPORT_MODULE();
+
 RCT_CUSTOM_VIEW_PROPERTY(open, BOOL, SidebarMainView)
 {
     if ([RCTConvert BOOL:json]) {

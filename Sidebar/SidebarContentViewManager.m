@@ -8,4 +8,6 @@
     return [[SidebarContentView alloc] init];
 }
 
+RCT_EXPORT_MODULE();
+
 @end

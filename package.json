@@ -1,10 +1,16 @@
 {
   "name": "react-thesidebar",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "description": "React Native wrapper for TheSidebar.",
+  "main": "sidemenu.js",
   "scripts": {
     "start": "node_modules/react-native/packager/packager.sh"
   },
-  "dependencies": {
-    "react-native": "git://github.com/facebook/react-native.git#master"
+  "peerDependencies": {
+    "react-native": "^0.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jondanao/TheSidebarController.git"
   }
 }
